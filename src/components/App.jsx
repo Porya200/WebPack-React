@@ -1,10 +1,9 @@
 import React , { Component } from 'react';
-
 class App extends Component {
 
     state = {
         task : {
-            title : 'My first task',
+            title : 'اولین برنامه پیش رو',
             done : true
         }
     }
@@ -22,7 +21,7 @@ class App extends Component {
             <h3>{this.state.task.title}</h3>
             <h1>{this.state.task.done.toString()}</h1>
             <button onClick = {this.handleClick}>
-                click
+                کلیک کن
             </button>
             </div>
         )

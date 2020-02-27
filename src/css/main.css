@@ -1,0 +1,30 @@
+@import '../fonts/IranYekan/IRANYekan.css';
+
+body {
+    background-color: rgba(141, 214, 249, 0.35);
+    color: black;
+    font-family: IRANYekan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.image-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    border: 1px solid rgba(0 , 0 , 0 , .5);
+    padding: 40px 10px 10px 10px ;
+}
+.image-box h3 {
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 0;
+}
+.image-box p {
+    direction: rtl;
+    text-align: justify;
+    width: 550px;
+}
