@@ -21,7 +21,21 @@ module.exports = {
         rules : [
             {
                 test: /\.(sa|sc|c)ss$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: [
+                    {
+                      loader: Minify_css.loader,
+                      options: {
+                        hmr: process.env.NODE_ENV === 'development',
+                        name: '[path][name].[ext]',
+                        url: true,
+                        modules: {
+                          localIdentName: '[local]',
+                        },
+                      },
+                    },
+                    'css-loader',
+                    'sass-loader',
+                  ],
             },
            {
                 test: /\.(png|svg|jpg|gif)$/,
@@ -53,6 +67,10 @@ module.exports = {
     plugins : [
         new HtmlWebpack ({
             template : './src/index.html'
+        }),
+        new Minify_css({
+            filename: '[name].css',
+            chunkFilename: '[id].css',
         })
     ]
 
