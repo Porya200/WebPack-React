@@ -25,8 +25,9 @@ module.exports = {
                     {
                       loader: Minify_css.loader,
                       options: {
-                        hmr: process.env.NODE_ENV === 'development',
+                        hmr: process.env.NODE_ENV === 'production',
                         name: '[path][name].[ext]',
+                        reloadAll: true,
                         url: true,
                         modules: {
                           localIdentName: '[local]',

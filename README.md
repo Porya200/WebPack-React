@@ -8,3 +8,4 @@
 ### 5. Bootstarp v4.4.1
 ### 6. Font IranYekan
 ### 7. Lazy Load Image
+### 8. Add Minify CSS Plugin
