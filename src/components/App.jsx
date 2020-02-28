@@ -3,7 +3,8 @@ class App extends Component {
 
     state = {
         task : {
-            title : 'اولین برنامه پیش رو',
+            builder : 'سازنده',
+            title : 'پوریا حدادی',
             done : true
         }
     }
@@ -18,9 +19,12 @@ class App extends Component {
     render () {
         return (
             <div>
-            <h3>{this.state.task.title}</h3>
+            <div class="d-flex justify-content-center align-items-center">
+                <h5 class="ml-2">{this.state.task.builder} :</h5>
+                <h3>{this.state.task.title}</h3>
+            </div>
             <h1>{this.state.task.done.toString()}</h1>
-            <button onClick = {this.handleClick}>
+            <button class="btn btn-success" onClick = {this.handleClick}>
                 کلیک کن
             </button>
             </div>
